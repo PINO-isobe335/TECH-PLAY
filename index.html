@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TECH PLAYアンケートへ移動中</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #111;
+      color: #f9f9f9;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #66fcf1;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #c5c6c7;
+    }
+    .logo {
+      margin-bottom: 40px;
+    }
+  </style>
+  <script>
+    const formUrls = [
+      "https://docs.google.com/forms/d/e/FORM_ID_1/viewform",
+      "https://docs.google.com/forms/d/e/FORM_ID_2/viewform",
+      "https://docs.google.com/forms/d/e/FORM_ID_3/viewform",
+      "https://docs.google.com/forms/d/e/FORM_ID_4/viewform",
+      "https://docs.google.com/forms/d/e/FORM_ID_5/viewform",
+      "https://docs.google.com/forms/d/e/FORM_ID_6/viewform"
+    ];
+
+    window.onload = function() {
+      const randomIndex = Math.floor(Math.random() * formUrls.length);
+      setTimeout(() => {
+        window.location.href = formUrls[randomIndex];
+      }, 2000); // 2秒後にリダイレクト
+    };
+  </script>
+</head>
+<body>
+  <div class="logo">
+    <img src="https://techplay.jp/images/logo.svg" alt="TECH PLAY" width="180">
+  </div>
+  <h1>TECH PLAYをより良くするためのアンケートにご協力いただき、ありがとうございます。</h1>
+  <p>アンケートページに自動でリダイレクトしています。<br>
+    移動しない場合は、しばらくお待ちください。</p>
+</body>
+</html>
